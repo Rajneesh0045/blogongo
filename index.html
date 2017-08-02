@@ -4,14 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>My Blog</title>
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'" async>
     <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
-    <script src="jquery-2.1.4.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="main-header">
         <h1>Develop to Inspire</h1>
         <img src="assets/images/me3.JPG" alt="rajneesh" />
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <nav class="navigation">
+          <cross id="cross">X</cross>
+          <ul>
+            <li>Home</li>
+            <li>Projects</li>
+            <li>Github</li>
+            <li>Social</li>
+          </ul>
+        </nav>
       </div>
       <div class="blogs">
         <div class="blogwrap">
@@ -126,5 +136,18 @@
         </div>
       </div>
     </div>
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script>
+    $('.fa-bars').click(function() {
+        $('.navigation').css({
+          'transform' : 'translate(0,0)'
+        })
+      });
+    $('#cross').click(function() {
+      $('.navigation').css({
+        'transform' : 'translate(100%,0)'
+      })
+    });
+    </script>
   </body>
 </html>
